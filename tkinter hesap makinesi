@@ -1,0 +1,47 @@
+from tkinter import*
+pencere=Tk()
+
+
+def hesap_makinesi():
+        sayi1=int(entry.get())
+        sayi2=int(entry2.get())
+        işlem=str(entry3.get())
+        if işlem=='*':
+              label.config(text=sayi1*sayi2)
+        if işlem=='/':
+              label.config(text=sayi1/sayi2)
+        if işlem=='+':
+              label.config(text=sayi1+sayi2)
+        if işlem=='-':
+              label.config(text=sayi1-sayi2)
+
+label=Label(pencere)
+label.config(text="Hesap makinesi",font=("Arial",20))
+label.place(x=20,y=30)
+
+label2=Label(pencere)
+label2.config(text="sayı 1",font=("Arial",10))
+label2.place(x=20,y=90)
+
+label3=Label(pencere)
+label3.config(text="sayi 2",font=("Arial",10))
+label3.place(x=20,y=130)
+
+label4=Label(pencere)
+label4.config(text="işlem",font=("Arial",10))
+label4.place(x=20,y=170)
+
+entry=Entry(pencere)
+entry.place(x=20,y=110)
+
+entry2=Entry(pencere)
+entry2.place(x=20,y=150)
+
+entry3=Entry(pencere)
+entry3.place(x=20,y=190)
+
+button=Button(pencere)
+button.config(text="Hesapla",bg="black",fg="white",command=hesap_makinesi)
+button.place(x=20,y=230)
+
+mainloop()
